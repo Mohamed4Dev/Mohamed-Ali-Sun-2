@@ -2,12 +2,12 @@
 //function Q1
 function getNumMatches($word, $array)
 {
+    $numMatched = 0;
     for ($i = 0; $i < count($array); $i++) {
-        if (in_array($word, $array)) {
-            $arrayPushed[] = $word;
+        if ($array[$i] == $word) {
+            $numMatched++;
         }
     }
-    $numMatched = count($arrayPushed);
     return $numMatched;
 }
 

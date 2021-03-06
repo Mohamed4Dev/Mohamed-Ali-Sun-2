@@ -46,14 +46,13 @@ if (isset($_POST['submit'])) {          //check for method 'post'
         $errors[] = "description must be string";
     }
 
-    //errors display 
     if (count($errors) != 0) {
-        print_r($errors);
-    } else if (count($errors) == 0) {
+        print_r($errors);               // errors display if any
+    } else if (count($errors) == 0) {   // data display if no errors
         echo "name is $username <br>";
         echo "price is $price <br>";
         echo "price after discount is " . getPriceWithDiscount($price) . "<br>";
-        if (empty($description)) {
+        if (empty($description)) {      // handle description exseition 
         } else {
             echo "description <br> $description <br>";
         }
